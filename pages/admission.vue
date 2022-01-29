@@ -42,7 +42,7 @@ export default {
 
 <style scoped>
 .admission-bg {
-  background-image: url('https://cdn.vuetifyjs.com/images/cards/house.jpg');
+  background-image: url('https://res.cloudinary.com/reinforcedai/image/upload/v1643484273/pexels-rodnae-productions-7713548_tcnttn.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

@@ -6,7 +6,7 @@
         src="https://res.cloudinary.com/reinforcedai/image/upload/v1643474744/pexel/pexels-pixabay-207692_riefkk.jpg"
         class="news-bg"
       >
-        <v-row align="center" justify="left" class="fill-height">
+        <v-row align="center" justify="center" class="fill-height">
           <v-col cols="12">
             <h1 class="primary--text text-center">{{ title }}</h1>
           </v-col>
