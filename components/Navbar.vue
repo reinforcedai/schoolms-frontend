@@ -113,7 +113,7 @@
               class="font-weight-light info"
             >
               <v-list-item-content>
-                <v-list-item-title v-text="child.title" class="text-capitalize accent--text"></v-list-item-title>
+                <v-list-item-title v-text="child.title" class="text-capitalize primary--text"></v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </v-menu>

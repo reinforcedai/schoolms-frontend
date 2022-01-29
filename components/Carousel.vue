@@ -14,7 +14,7 @@
       >
         <v-row align="center" justify="center" class="fill-height">
           <v-col class="text-center">
-            <h1 class="primary--text font-weight-black">{{ slide.text }}</h1>
+            <h1 class="primary--text font-weight-black text-h2">{{ slide.text }}</h1>
           </v-col>
         </v-row>
       </v-carousel-item>
