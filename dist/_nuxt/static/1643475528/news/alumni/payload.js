@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/news/alumni", {data:[{}],fetch:{},mutations:[]});
