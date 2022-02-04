@@ -8,10 +8,8 @@
       class="pa-3"
     >
       <v-card
-        flat
-        tile
+        elevation="24"
         min-height="200"
-        class="info"
       >
         <div class="d-flex align-center pa-3">
           <v-avatar size="80">
@@ -21,7 +19,7 @@
             />
           </v-avatar>
           <div class="pl-2">
-            <h3 class="primary--text text-left pb-1">{{ testimonial.name }}</h3>
+            <h3 class="secondary--text text-left pb-1">{{ testimonial.name }}</h3>
             <small class="accent--text">{{ testimonial.portfolio }}</small> 
           </div>
         </div>

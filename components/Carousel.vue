@@ -27,7 +27,11 @@
         cycle: true,
         slides: [
           {
-            src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1643472589/pexel/pexels-polina-tankilevitch-3735736_jjvelp.jpg',
+            src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1643474744/pexel/pexels-pixabay-207692_riefkk.jpg',
+            text: 'Welcome to College',
+          },
+          {
+            src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1643474754/pexel/pexels-pavel-danilyuk-8442567_tdbmri.jpg',
             text: 'Laboratory',
           },
           {
@@ -45,10 +49,6 @@
           {
             src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1643473054/pexel/alina-chernysheva-JA2S6sJWleg-unsplash_fbfbpq.jpg',
             text: 'Sports',
-          },
-          {
-            src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1643474754/pexel/pexels-pavel-danilyuk-8442567_tdbmri.jpg',
-            text: 'Experiment',
           },
         ],
       }

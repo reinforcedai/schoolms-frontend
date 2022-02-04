@@ -1,26 +1,26 @@
 <template>
   <v-row justify="center" no-gutters>
     <v-col cols="12">
+      <v-alert outlined v-if="error" type="error" class="my-3">{{ error }}</v-alert>
       <v-form v-model="valid" ref="form" @submit.prevent="">          
           <v-row justify="center" align="center">
             <v-col cols="10">
-              <h3 class="success--text text-center text-capitalize mb-10">Drop A Message</h3>
+              <h3 class="secondary--text text-center text-capitalize mb-10">Leave A Message</h3>
               <v-row>
                 <v-col
                   cols="12"
                   sm="6"
-                  class="py-0"
+                  class="secondary--text py-0"
                 >
                   <v-text-field
                     v-model="firstName"
                     label="First Name"
-                    dark
                     required
                     outlined
-                    placeholder="First Name"
+                    placeholder="first name"
                     :rules="nameRules"
-                    class="success--text"
-                    color="success"
+                    class="secondary--text"
+                    color="secondary"
                   ></v-text-field>
                 </v-col>
                 <v-col
@@ -31,13 +31,12 @@
                   <v-text-field
                     v-model="lastName"
                     label="Last Name"
-                    dark
                     required
                     outlined
-                    placeholder="Last Name"
+                    placeholder="last name"
                     :rules="nameRules"
-                    class="success--text"
-                    color="success"
+                    class="secondary--text"
+                    color="secondary"
                   ></v-text-field>
                 </v-col>
                 <v-col
@@ -48,13 +47,12 @@
                   <v-text-field
                     v-model="email"
                     label="Email"
-                    dark
                     required
                     outlined
                     placeholder="email address"
                     :rules="emailRules"
-                    class="success--text"
-                    color="success"
+                    class="secondary--text"
+                    color="secondary"
                   ></v-text-field>
                 </v-col>
                 <v-col
@@ -65,13 +63,12 @@
                 <v-text-field
                   v-model="phoneNumber"
                   label="Phone Number"
-                  dark
                   required
                   outlined
-                  placeholder="Phone Number"
+                  placeholder="phone number"
                   :rules="phoneNumberRules"
-                  class="success--text"
-                  color="success"
+                  class="secondary--text"
+                  color="secondary"
                 ></v-text-field>
                 </v-col>
               </v-row>
@@ -79,32 +76,29 @@
               <v-text-field
                 v-model="country"
                 label="Country"
-                dark
                 required
                 outlined
-                placeholder="Country"
+                placeholder="country"
                 :rules="countryRules"
-                class="success--text"
-                color="success"
+                class="secondary--text"
+                color="secondary"
               ></v-text-field>
 
               <v-textarea
                 v-model="message"
                 label="Message"
-                dark
                 required
                 outlined
-                placeholder="Message"
+                placeholder="message"
                 :rules="messageRules"
-                class="success--text"
-                color="success"
+                class="secondary--text"
+                color="secondary"
               ></v-textarea>
               <v-btn
                 block
-                large
                 elevation="10"
-                class="success text-uppercase font-weight-bold"
-                @click="handleContact"
+                class="secondary text-uppercase font-weight-bold"
+                @click="handleContactForm"
               >
                 Submit
               </v-btn>
@@ -147,17 +141,17 @@ export default {
   }),
 
   methods: {
-    async handleContact() {
+    async handleContactForm() {
       if (this.$refs.form.validate()) {
         try {
-          await this.$strapi.create('contacts', {
-            firstName: this.firstName,
-            lastName: this.lastName,
-            email: this.email,
-            phoneNumber: this.phoneNumber,
-            country: this.country,
-            message: this.message,
-          }),
+          // await this.create('contacts', {
+          //   firstName: this.firstName,
+          //   lastName: this.lastName,
+          //   email: this.email,
+          //   phoneNumber: this.phoneNumber,
+          //   country: this.country,
+          //   message: this.message,
+          // }),
   
           this.$swal({
             title: 'Successful!',

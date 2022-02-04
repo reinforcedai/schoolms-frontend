@@ -1,15 +1,15 @@
 <template>
   <v-row>
-    <v-system-bar v-if="systemBar" app class="hidden-sm-and-down info primary--text">
+    <v-system-bar app class="hidden-sm-and-down info primary--text">
       <v-btn
-        v-for="link in systemBarLinks"
-        :key="link.text"
-        :to="link.to"
-        tile
-        text
-        x-small
-        class="primary--text text-capitalize"
-      >
+          v-for="link in systemBarLinks"
+          :key="link.text"
+          :to="link.to"
+          tile
+          text
+          x-small
+          class="primary--text text-capitalize"
+        >
         {{ link.text }}
       </v-btn>
       <v-spacer></v-spacer>
@@ -26,23 +26,22 @@
       v-model="drawer"
       app
       temporary
-      :color="color"
+      class="secondary"
     >
       <nuxt-link to="/" exact class="text-decoration-none">
         <v-system-bar
           height="55"
-          :color="color"
+          class="secondary"
         >
-          <div class="d-flex align-center primary--text ml-5">
-            <v-img
-              alt="logo"
-              class="shrink mr-2"
-              contain
-              :src="require('../assets/img/logo.png')"
-              width="40"
-            />
-            <h3>{{ site }}</h3>
-          </div>
+          <v-img
+            alt="logo"
+            contain
+            :src="require('../assets/img/logo.png')"
+            transition="scale-transition"
+            width="40"
+            class="shrink"
+          />
+          <h3 class="primary--text">{{ siteName }}</h3>
         </v-system-bar>
       </nuxt-link>
       
@@ -72,11 +71,11 @@
           </v-list-item>
         </v-list-group>
 
-        <v-list-item v-else :to="link.to">
-        <v-list-item-content>
-          <v-list-item-title class="text-capitalize primary--text" v-text="link.title" />
-        </v-list-item-content>
-        </v-list-item>
+          <v-list-item v-else :to="link.to">
+          <v-list-item-content>
+            <v-list-item-title class="text-capitalize primary--text" v-text="link.title" />
+          </v-list-item-content>
+          </v-list-item>
 
       </v-list>
     </v-navigation-drawer>
@@ -84,7 +83,7 @@
     <v-app-bar
       app
       flat
-      :color="color"
+      color="secondary"
     >
       <v-app-bar-nav-icon
         color="success"
@@ -95,6 +94,7 @@
       
       <nuxt-link to="/" exact class="text-decoration-none">
         <div class="d-flex align-center ml-5">
+          <v-toolbar-title class="font-weight-bold">
             <v-img
               alt="logo"
               class="shrink mr-2"
@@ -102,7 +102,8 @@
               :src="require('../assets/img/logo.png')"
               width="40"
             />
-            <h3>{{ site }}</h3>
+          </v-toolbar-title>
+          <h3>{{ siteName }}</h3>
         </div>
       </nuxt-link>
       <v-spacer/>
@@ -146,35 +147,16 @@
 </template>
 
 <script>
-export default {
-  props: {
-    color: {
-      type: String,
-      default: 'secondary',
-    },
-    systemBar: {
-      type: Boolean,
-      default: false,
-    },
-    navLinks: {
-      type: Array,
-      default: () => ([]),
-    },
-    systemBarLinks: {
-      type: Array,
-      default: () => ([]),
-    },
-    site: {
-      type: String,
-      default: '',
-    },
-  },
+import { mapGetters } from 'vuex'
 
+export default {
   data() {
     return {
       drawer: false,
     }
   },
-  
+  computed: {
+    ...mapGetters(['siteName', 'systemBarLinks', 'navLinks']),
+  },
 }
 </script>

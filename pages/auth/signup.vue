@@ -47,7 +47,7 @@
               </v-col>
             </v-row>
         </v-form>
-        <v-card-text class="primary">
+        <v-card-text class="primary tex-center">
           <nuxt-link to="/auth/login" class="text-decoration-none grey--text">
             You have an account already?
             <span class="light-blue--text text--lighten-2">
@@ -62,6 +62,7 @@
 <script>
 
 export default {
+  layout: 'auth',
   data: () => ({
     error: null,
     valid: false,

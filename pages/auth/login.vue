@@ -1,6 +1,7 @@
 <template>
-  <v-row justify="center" class="my-16 mx-5">
+  <v-row justify="center" class="my-10 mx-5">
     <v-col cols="12" md="6">
+      <v-alert outlined v-if="error" type="error" class="my-3">{{ error }}</v-alert>
       <v-card class="info">
         <v-card-text class="success">
           <h3 class="secondary--text text-center">Log Into Your Account</h3>
@@ -9,7 +10,7 @@
             <v-row justify="center" align="center" class="pa-5">
               <v-col cols="12" class="pt-0 mt-5">
                 <v-text-field
-                  v-model="email"
+                  v-model="credentials.email"
                   label="Email"
                   dark
                   required
@@ -21,9 +22,23 @@
                 ></v-text-field>
               </v-col>
 
+              <v-col cols="12" class="pt-0 mt-5">
+                <v-text-field
+                  v-model="credentials.username"
+                  label="Username"
+                  dark
+                  required
+                  outlined
+                  placeholder="username"
+                  :rules="usernameRules"
+                  class="accent--text"
+                  color="accent"
+                ></v-text-field>
+              </v-col>
+
               <v-col  cols="12" class="pt-0">
                 <v-text-field
-                  v-model="password"
+                  v-model="credentials.password"
                   label="Password"
                   dark
                   required
@@ -43,21 +58,21 @@
                   large
                   elevation="10"
                   class="accent text-uppercase font-weight-bold"
-                  @click="handleLogin"
+                  @click="userLogin"
                 >
                   Submit
                 </v-btn>
               </v-col>
             </v-row>
         </v-form>
-        <v-card-text class="success">
+        <!-- <v-card-text class="success text-center">
           You don't have an account?
           <nuxt-link to="/auth/signup" class="text-decoration-none">
             <i class="light-blue--text">
               Create Account
             </i>
           </nuxt-link>
-        </v-card-text>
+        </v-card-text> -->
       </v-card>
     </v-col>
   </v-row>
@@ -65,50 +80,44 @@
 
 <script>
 export default {
+  layout: 'auth',
   data: () => ({
     error: null,
     valid: false,
     title: '',
-    email: '',
-    password: null,
     showPassword: false,
+    credentials: {
+        username: 'admin@gmail.com',
+        email: 'admin@gmail.com',
+        password: 'test11111'
+      },
 
     emailRules: [
       v => !!v || 'Email is required',
       v => /.+@.+/.test(v) || 'Email must be valid',
     ],
+
+    usernameRules: [
+      v => !!v || 'Username is required',
+      v => /.+@.+/.test(v) || 'Username must be valid',
+    ],
     passwordRules: [
         v => !!v || 'Password is required',
     ],
   }),
-
   methods: {
-    async handleLogin() {
-      // if (this.$refs.form.validate()) {
-      //   try {
-      //     await this.$strapi.create('contacts', {
-      //       email: this.email,
-      //       password: this.pasword,
-      //     }),
   
-      //     this.$swal({
-      //       title: 'Successful!',
-      //       text: 'Logged in',
-      //       icon: 'success',
-      //       button: 'Ok',
-      //     }),
-      //     this.$refs.form.reset()
-  
-      //   } catch (e) {
-      //     this.$swal({
-      //       title: e,
-      //       icon: 'error',
-      //       button: 'Ok',
-      //     })
-      //   }
-      // }
+    async userLogin() {
+      try {
+        let response = await this.$auth.loginWith('local', { data: this.credentials })
+        // this.$router.push('/students/profile')
+        // console.log(response.data)
+        console.log(this.$auth.loggedIn)
+      } catch (err) {
+        console.log( this.error = err.response.data)
+      }
     }
-  },
+  }
 
 }
 </script>

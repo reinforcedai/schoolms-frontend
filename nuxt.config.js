@@ -1,8 +1,8 @@
 import colors from 'vuetify/es5/util/colors'
+require("dotenv").config()
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  target: 'static',
   head: {
     titleTemplate: '%s - sms-frontend',
     title: 'Home',
@@ -44,12 +44,13 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: process.env.BASE_URL
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -93,7 +94,48 @@ export default {
   publicRuntimeConfig: {
     googleAnalytics: {
       id: process.env.GOOGLE_ANALYTICS_ID
+    },
+    axios: {
+      browserBaseURL: process.env.BROWSER_BASE_URL
     }
+  },
+
+
+  privateRuntimeConfig: {
+
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID,
+    },
+    axios: {
+      baseURL: process.env.BASE_URL
+    }
+  },
+
+  auth: {
+    strategies: {
+      local: {
+        token: {
+          property: 'access_token',
+          global: true,
+          // required: true,
+          // type: 'Bearer'
+        },
+        user: {
+          property: false,
+          // autoFetch: true
+        },
+        endpoints: {
+          login: { url: '/auth/login/', method: 'post', },
+          logout: { url: '/auth/logout/', method: 'post', },
+          user: { url: '/auth/user/', method: 'get', },
+        }
+      }
+    },
+    redirect: {
+      login: '/students/login/',
+      logout: '/students/login/',
+      home: '/students/profile'
+    },
   },
   
 }

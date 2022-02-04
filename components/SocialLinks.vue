@@ -1,26 +1,40 @@
 <template>
-  <v-container class="text-center">
+  <div class="text-center">
     <v-btn
-      v-for="(link, i) in socialLinks"
+      v-for="(link, i) in socialMediaLinks"
       :key="i"
       icon
       :href="link.url"
       target="_blank"
-      class="mx-1 success--text"
+      class="success--text"
     >
-      <v-icon size="20px">
+      <v-icon :color="color" :size="size">
         {{ link.icon }}
       </v-icon>
     </v-btn>
-  </v-container>
+  </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 
 export default {
+  props: {
+    color: {
+      type: String,
+      default: '',
+    },
+    size: {
+      type: String,
+      default: '20',
+    },
+    socials: {
+      type: Array,
+      default: () => ([]),
+    },
+  },
   computed: {
-      ...mapGetters(['socialLinks']),
+      ...mapGetters(['socialMediaLinks']),
     },
 }
 </script>
