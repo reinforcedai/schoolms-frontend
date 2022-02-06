@@ -100,7 +100,6 @@ export default {
     }
   },
 
-
   privateRuntimeConfig: {
 
     googleAnalytics: {
@@ -134,7 +133,6 @@ export default {
     redirect: {
       login: '/auth/login/',
       logout: '/auth/login/',
-      // home: '/students/profile'
     },
   },
   
