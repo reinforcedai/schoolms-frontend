@@ -25,5 +25,8 @@
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/vuetify": "^1.12.3"
+  },
+  "engines": {
+    "node": "16.13.1"
   }
 }
