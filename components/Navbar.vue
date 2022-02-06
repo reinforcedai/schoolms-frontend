@@ -140,6 +140,9 @@
             </v-list-item>
           </v-menu>
         </v-btn>
+        <div v-if="profile">
+          <ProfileMenu />
+        </div>
       </v-toolbar-items>
     </v-app-bar>
   </v-row>
@@ -167,6 +170,10 @@ export default {
     site: {
       type: String,
       default: '',
+    },
+    profile: {
+      type: Boolean,
+      default: false,
     },
   },
 

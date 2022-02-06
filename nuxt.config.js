@@ -3,8 +3,6 @@ require("dotenv").config()
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  target: 'static',
-  ssr: false,
   head: {
     titleTemplate: '%s - sms-frontend',
     title: 'Home',
@@ -134,9 +132,9 @@ export default {
       }
     },
     redirect: {
-      login: '/students/login/',
-      logout: '/students/login/',
-      home: '/students/profile'
+      login: '/auth/login/',
+      logout: '/auth/login/',
+      // home: '/students/profile'
     },
   },
   

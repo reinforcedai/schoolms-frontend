@@ -45,21 +45,23 @@ export const state = () => ({
     },
   ],
   studentsNavLinks: [
-    { title: 'Student Portal', to: '/students/', },
-    { title: 'Login', to: '/auth/login', },
-    // { title: 'Sign Up', to: '/auth/signup', },
+    { title: 'Student Portal', to: '/auth/login/', },
+    { title: 'Exams And Records', to: '/Records/', },
+    { title: 'Academic Calendar', to: '/calendar/', },
+    { title: 'Lecture Timetable', to: '/timetable/', },
+    { title: 'Learning Resources', to: '/resources/', },
   ],
   staffNavLinks: [
     { title: 'Staff Portal', to: '/staff/', },
-    { title: 'Login', to: '/auth/login', },
+    // { title: 'Login', to: '/auth/login', },
   ],
   alumniNavLinks: [
     { title: 'Alumni Portal', to: '/alumni/', },
-    { title: 'Login', to: '/auth/login', },
+    // { title: 'Login', to: '/auth/login', },
   ],
   parentsNavLinks: [
     { title: 'Parents Portal', to: '/parents/', },
-    { title: 'Login', to: '/auth/login', },
+    // { title: 'Login', to: '/auth/login', },
   ],
   quickLinks: [
     { text: 'Facilities', to: '/academics/facilities/', },

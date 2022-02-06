@@ -11,14 +11,14 @@
 
     <v-col cols="3" class="text-center">
       <v-btn
-            to="/auth/login"
-            outlined
-            x-large
-            large
-            class="info--text"
-          >
-            Login
-          </v-btn>
+        to="/auth/login"
+        outlined
+        x-large
+        large
+        class="info--text"
+      >
+        Login
+      </v-btn>
     </v-col>
 
     <v-col cols="8" class="text-center">

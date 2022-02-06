@@ -8,7 +8,7 @@
       class="pa-3"
     >
       <v-card
-        elevation="24"
+        elevation="15"
         min-height="200"
       >
         <div class="d-flex align-center pa-3">

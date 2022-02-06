@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <Navbar :site="siteName" :navLinks="studentsNavLinks" :color="color" />
+    <Navbar :site="siteName" :navLinks="studentsNavLinks" :color="color" :profile="profile" />
     <v-main>
       <v-container fluid class="pa-0">
         <nuxt keep-alive />
@@ -19,6 +19,7 @@ export default {
       drawer: false,
       color: 'error',
       footer: false,
+      profile: true,
     }
   },
   computed: {

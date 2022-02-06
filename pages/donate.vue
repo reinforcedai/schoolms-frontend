@@ -1,8 +1,10 @@
 <template>
-  <v-row justify="center" align="center" class="my-16" no-gutters>
+  <v-row justify="center" align="center" class="my-16">
 
-    <v-col cols="11" md="5" class="text-center">
+    <v-col cols="11" class="my-16 text-center">
+      <h1 class="accent--text mb-5">Donate By Credit Card</h1>
       <v-btn
+        href="https://ravesandbox.flutterwave.com/donate/kbwuv7ogyhkv"
         outlined
         x-large
         large
@@ -11,76 +13,25 @@
           Donate
       </v-btn>
     </v-col>
-
-    <v-col cols="11" md="6">
-      <h1 class="accent--text">
-        Direct Bank Transfer
-      </h1>
-      <v-card>
-        <v-tabs
-          background-color="accent"
-          centered
-          dark
-          class="accent--text"
+    <v-col cols="11" class="accent--text">
+      <h1>Direct Bank Transfer</h1>
+      <v-row>
+        <v-col
+          v-for="bank in banks"
+          :key="bank.type"
+          cols="12"
+          md="4"
         >
-          <v-tab>
-            Naira Account
-          </v-tab>
-          <v-tab>
-            Dollar Account
-          </v-tab>
-          <v-tab>
-            Pounds Account
-          </v-tab>
-
-          <v-tab-item>
-            <v-card-title>
-              Zenith Bank
-            </v-card-title>
-            <v-card-subtitle>
-              Beneficiary Account Name: xyz
-            </v-card-subtitle>
-            <v-card-subtitle>
-              Account Number: xxx xxx xxx
-            </v-card-subtitle>
-            <v-card-subtitle>
-              Swift Code: xxx xxx xxx
-            </v-card-subtitle>
-          </v-tab-item>
-
-          <v-tab-item>
-            <v-card-title>
-             Bank of America
-            </v-card-title>
-            <v-card-subtitle>
-              Beneficiary Account Name: xyz
-            </v-card-subtitle>
-            <v-card-subtitle>
-              Account Number: xxx xxx xxx
-            </v-card-subtitle>
-            <v-card-subtitle>
-              Swift Code: xxx xxx xxx
-            </v-card-subtitle>
-          </v-tab-item>
-
-          <v-tab-item>
-            <v-card-title>
-              UK Bank
-            </v-card-title>
-            <v-card-subtitle>
-              Beneficiary Account Name: xyz
-            </v-card-subtitle>
-            <v-card-subtitle>
-              Account Number: xxx xxx xxx
-            </v-card-subtitle>
-            <v-card-subtitle>
-              Swift Code: xxx xxx xxx
-            </v-card-subtitle>
-          </v-tab-item>
-
-        </v-tabs>
-      </v-card>
-          
+          <v-card class="info--text ma-1 pa-3">
+            <h2 class="ml-4">{{ bank.type }}</h2>
+            <v-card-title class="info--text">{{ bank.bank }}</v-card-title>
+            <v-card-subtitle class="info--text">{{ bank.accountName }}</v-card-subtitle>
+            <v-card-subtitle class="info--text">{{ bank.accountNumber }}</v-card-subtitle>
+            <v-card-subtitle class="info--text">{{ bank.swiftCode }}</v-card-subtitle>
+          </v-card>
+              
+        </v-col>
+      </v-row>
     </v-col>
 
   <SocialHead :title="title" :description="description" :image="image" />
@@ -93,7 +44,30 @@ export default {
   data: () => ({
     title: 'Donation',
     description: '',
-    image: '',    
+    image: '', 
+    banks: [
+        {
+          type: 'Naira Account',
+          bank: 'Zenith Bank',
+          accountName: 'Beneficiary Account Name: xyz',
+          accountNumber: 'Account Number: xxx xxx xxx',
+          swiftCode: 'Swift Code: xxx xxx xxx',
+        },
+        {
+          type: 'Dollar Account',
+          bank: 'Bank of America',
+          accountName: 'Beneficiary Account Name: xyz',
+          accountNumber: 'Account Number: xxx xxx xxx',
+          swiftCode: 'Swift Code: xxx xxx xxx',
+        },
+        {
+          type: 'Pounds Account',
+          bank: 'Bank Of England',
+          accountName: 'Beneficiary Account Name: xyz',
+          accountNumber: 'Account Number: xxx xxx xxx',
+          swiftCode: 'Swift Code: xxx xxx xxx',
+        },
+      ],   
   })
 }
 </script>

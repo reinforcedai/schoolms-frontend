@@ -117,7 +117,7 @@ export default {
         console.log( this.error = err.response.data)
       }
     }
-  }
+  },
 
 }
 </script>
