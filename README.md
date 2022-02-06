@@ -1,4 +1,4 @@
-# sms-frontend
+# schoolms-frontend
 
 ## Build Setup
 
