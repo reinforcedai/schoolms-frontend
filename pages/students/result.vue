@@ -15,7 +15,7 @@
         </div>
         </v-col>
         <v-col cols="6">
-          <p>OTHER PARTNER NAME AND LOGO</p>
+          <p>PARTNER NAME AND LOGO</p>
         </v-col>
       </v-row>
     </v-col>
@@ -24,8 +24,8 @@
     </v-col>
     <v-col cols="11" md="10" class="accent--text text-cente">
       <v-row>
-        <v-col cols="4">
-          <v-list-item class="">
+        <v-col cols="8">
+          <v-list-item class="font-weight-bold">
             <v-list-item-content>
               <v-list-item-title>Name: Perry Morgan</v-list-item-title>
               <v-list-item-title>Admission: xxxxxx</v-list-item-title>
@@ -34,10 +34,6 @@
               <v-list-item-title>Session: 2022/2023</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-        </v-col>
-        <v-col cols="4">
-          <h4 class="text-center pb-1">Performance</h4>
-          <DataTable :headers="performanceHeaders" :desserts="performanceDesserts" :header="header" />
         </v-col>
         <v-col cols="4">
           <v-img
@@ -54,7 +50,11 @@
     </v-col>
     <v-col cols="11" md="10" class="accent--text">
       <v-row>
-        <v-col cols="6">
+        <v-col cols="4">
+          <h4 class="text-center pb-1">Performance</h4>
+          <DataTable :headers="performanceHeaders" :desserts="performanceDesserts" :header="header" />
+        </v-col>
+        <v-col cols="4">
           <h4 class="text-center pb-5">Comments</h4>
           <DataTable :headers="commentHeaders" :desserts="commentDesserts" />
         </v-col>
