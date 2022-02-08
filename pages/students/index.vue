@@ -24,7 +24,7 @@
 export default {
   layout: 'students',
   data: () => ({
-    title: "Welcome To Students' Portal",
+    title: 'Welcome To Student Portal',
     description: '',
     image: '',
   }),

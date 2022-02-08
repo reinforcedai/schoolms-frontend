@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center">
+  <div>
     <v-btn
       v-for="(link, i) in socialMediaLinks"
       :key="i"

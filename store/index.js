@@ -16,9 +16,12 @@ export const state = () => ({
       to: '/academics',
       links: [
         { title: 'Departments', to: '/academics/departments', },
-        { title: 'Facilities', to: '/academics/facilities', },
         { title: 'Calendar', to: '/academics/calendar', },
       ],
+    },
+    {
+      title: 'Gallery',
+      to: '/gallery',
     },
     {
       title: 'Admission',
@@ -45,9 +48,9 @@ export const state = () => ({
     },
   ],
   studentsNavLinks: [
-    { title: 'Student Portal', to: '/auth/login/', },
     { title: 'Exams And Records', to: '/Records/', },
     { title: 'Academic Calendar', to: '/calendar/', },
+    { title: 'Check Result', to: '/result/', },
     { title: 'Lecture Timetable', to: '/timetable/', },
     { title: 'Learning Resources', to: '/resources/', },
   ],

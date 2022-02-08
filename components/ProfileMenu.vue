@@ -21,32 +21,14 @@
           </div>
         </div>
       </template>
-      <div
-        v-if="!$auth.loggedIn"
-      >
-        <v-btn
-          v-for="item in items"
-          :key="item.title"
-          :to="item.to"
-          block
-          text
-          tile
-          x-large
-          class="font-weight-light info"
-        >
-          {{ item.title }}
-        </v-btn>
-      </div>
-      <div
-        v-else
-      >
+      <div>
         <v-btn
           block
           text
           tile
           x-large
           class="font-weight-light info"
-          to=""
+          to="/students/profile/"
         >
           Profile
         </v-btn>
@@ -67,10 +49,6 @@
 <script>
   export default {
     data: () => ({
-      items: [
-        { title: 'Login', to: '/auth/login/' },
-        { title: 'Sign Up', to: '/auth/signup/' },
-      ],
     }),
     methods: {
       userLogout() {

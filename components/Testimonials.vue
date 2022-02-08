@@ -33,12 +33,29 @@
 import { getMedia } from "../utils/medias";
 
 export default {
-  props: {
-    testimonials: {
-      type: Array,
-      default: () => ({}),
-    },
-  },
+  data: () => ({
+    testimonials: [
+      {
+        'name': 'John Doe',
+        'portfolio': 'CEO',
+        'image': 'https://res.cloudinary.com/reinforcedai/image/upload/v1643473642/pexel/pexels-alexander-krivitskiy-1251247_akxkqo.jpg',
+        'testimony': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis delectus numquam doloremque nesciunt culpa qui',
+      },
+      {
+        'name': 'John Doe',
+        'portfolio': 'CEO',
+        'image': 'https://res.cloudinary.com/reinforcedai/image/upload/v1643473642/pexel/pexels-alexander-krivitskiy-1251247_akxkqo.jpg',
+        'testimony': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis delectus numquam doloremque nesciunt culpa qui',
+      },
+      {
+        'name': 'John Doe',
+        'portfolio': 'CEO',
+        'image': 'https://res.cloudinary.com/reinforcedai/image/upload/v1643473642/pexel/pexels-alexander-krivitskiy-1251247_akxkqo.jpg',
+        'testimony': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis delectus numquam doloremque nesciunt culpa qui',
+      },
+    ],
+    
+  }),
 
   methods: {
     getMedia,

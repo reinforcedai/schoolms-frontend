@@ -108,8 +108,8 @@
       <v-spacer/>
       <v-toolbar-items class="hidden-sm-and-down ml-5 pr-5">
         <v-btn
-          v-for="(link, i) in navLinks"
-          :key="i"
+          v-for="link in navLinks"
+          :key="link.title"
           tile
           text
           class="primary--text text-capitalize"
@@ -120,11 +120,12 @@
                 v-if="link.links"
                 v-bind="attrs"
                 v-on="on"
+                class="font-weight-black"
               >
                 {{ link.title }}
                 <v-icon size="15">mdi-chevron-down</v-icon>
               </div>
-              <nuxt-link v-else :to="link.to" exact class="text-decoration-none">
+              <nuxt-link v-else :to="link.to" exact class="text-decoration-none font-weight-black">
                 {{ link.title }}
               </nuxt-link>
             </template>
@@ -140,9 +141,22 @@
             </v-list-item>
           </v-menu>
         </v-btn>
-        <div v-if="profile">
-          <ProfileMenu />
-        </div>
+        <v-toolbar-items v-if="profile">
+          <v-btn
+            v-if="!$auth.loggedIn"
+            to="/auth/login/"
+            outlined
+            text
+            dark
+            x-large
+            class="text-capitalize"
+          >
+            Login
+          </v-btn>
+          <div v-else>
+            <ProfileMenu />
+          </div>
+        </v-toolbar-items>
       </v-toolbar-items>
     </v-app-bar>
   </v-row>

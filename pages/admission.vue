@@ -25,7 +25,6 @@
     </v-col>
 
     <SocialHead :title="title" :description="description" :image="image" />
-    
   </v-row>
 </template>
 
