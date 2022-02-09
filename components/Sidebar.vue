@@ -1,14 +1,14 @@
 <template>
-  <v-container>
+  <v-container class="hidden-sm-and-down success py-5">
     <v-list 
-      v-for="(link, i) in studentsNavLinks"
+      v-for="(link, i) in sideBarLinks"
       :key="i"
-      nav
-      class="success"
+      class="transparent"
     >
 
       <v-list-item
         :to="link.to"
+        class="my-n3"
       >
         <v-list-item-content>
           <v-list-item-title class="text-capitalize text-left accent--text" v-text="link.title" />
@@ -20,11 +20,13 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 
 export default {
-  computed: {
-    ...mapGetters(['studentsNavLinks']),
+  props: {
+    sideBarLinks: {
+      type: Array,
+      default: () => ([]),
+    },
   },
 }
 </script>

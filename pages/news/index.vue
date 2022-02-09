@@ -14,26 +14,40 @@
       </v-img>
     </v-col>
 
+    <v-col v-if="posts" cols="12" class="pa-10">
+      <BlogCard :posts="posts" />
+    </v-col>
+
+    <v-col v-else cols="12" class="text-center">
+      <p>Unavailable</p>
+    </v-col>
+
     <SocialHead :title="title" :description="description" :image="image" />
   </v-row>
 </template>
-<script>
 
+<script>
 export default {
   data: () => ({
-    title: 'News and Events',
+    title: 'News And Events',
     description: '',
     image: '',
     
   }),
+  async asyncData({ $axios, $config }) {
+    const response = await $axios.$get(`/news`)
+    const posts = response.results
+    return { posts }
+  }
 
 }
 </script>
+
 <style scoped>
 .news-bg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 70vh;
+  height: 60vh;
 }
 </style>

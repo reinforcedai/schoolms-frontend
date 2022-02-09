@@ -1,8 +1,19 @@
 <template>
-  <v-row justify="center" class="my-10 mx-5">
+  <v-row justify="center" align="center">
     <v-col cols="12" md="6">
-      <v-alert outlined v-if="error" type="error" class="my-3">{{ error }}</v-alert>
+      <Notification :message="error" />
       <v-card class="info">
+        <v-card-text class="success">
+          <nuxt-link to="/">
+            <v-img
+              alt="logo"
+              contain
+              :src="require('../../assets/img/logo.png')"
+              width="40"
+              class="shrink mx-auto"
+            />
+          </nuxt-link>
+        </v-card-text>
         <v-card-text class="success">
           <h3 class="secondary--text text-center">Log Into Your Account</h3>
         </v-card-text>
@@ -73,6 +84,11 @@
             </i>
           </nuxt-link>
         </v-card-text> -->
+        <v-card-text class="success accent--text text-center">
+          <nuxt-link to="/auth/forgot-password" class="accent--text">
+            Forgot Your Password?
+          </nuxt-link>
+        </v-card-text>
       </v-card>
     </v-col>
   </v-row>
@@ -87,8 +103,8 @@ export default {
     title: '',
     showPassword: false,
     credentials: {
-        username: 'admin@gmail.com',
-        email: 'admin@gmail.com',
+        username: 'danny@gmail.com',
+        email: 'danny@gmail.com',
         password: 'test11111'
       },
 
@@ -110,11 +126,12 @@ export default {
     async userLogin() {
       try {
         let response = await this.$auth.loginWith('local', { data: this.credentials })
-        // this.$router.push('/students/profile')
-        // console.log(response.data)
-        console.log(this.$auth.loggedIn)
+        if (response.data.user.is_student) {
+          this.$router.push('/students/')
+        }
+        // console.log(response.data.user)
       } catch (err) {
-        console.log( this.error = err.response.data)
+        this.error = err.response.data
       }
     }
   },

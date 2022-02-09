@@ -2,7 +2,7 @@
   <v-app dark>
     <Navbar :systemBarLinks="systemBarLinks" :systemBar="systemBar" :site="siteName" :navLinks="navLinks" />
     <v-main>
-      <v-container fluid class="pa-0">
+      <v-container fluid fill-height class="pa-0">
         <nuxt keep-alive />
       </v-container>
     </v-main>

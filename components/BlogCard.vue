@@ -8,23 +8,22 @@
     >
       <v-lazy>
         <v-card
-          :to="{ name: 'article-slug', params: { slug: post.slug } }"
+          :to="{ name: 'news-slug', params: { slug: post.slug } }"
           link
           flat
-          outlined
           min-height="500"
-          class="info"
+          class="success"
         >
-          <v-img v-if="post.image.url" :src="getMedia(post.image.url)" height="300" />
-          <v-card-title class="primary--text text-capitalize" v-if="post.title">{{ post.title }}</v-card-title>
+          <v-img v-if="post.image" :src="getMedia(post.image)" height="300" />
+          <v-card-title class="accent--text text-capitalize" v-if="post.title">{{ post.title }}</v-card-title>
           <v-card-subtitle class="accent--text" v-if="post.description">{{ post.description }}</v-card-subtitle>
           <v-card-actions>
             <v-btn
-              :to="{ name: 'article-slug', params: { slug: post.slug } }"
-              tile text
-              color="success"
+              :to="{ name: 'news-slug', params: { slug: post.slug } }"
+              text
+              class="accent--text text-capitalize"
             >
-              Read More
+              <i>Read More</i>
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -40,7 +39,7 @@ export default {
   props: {
     posts: {
       type: Array,
-      default: () => ({}),
+      default: () => ([]),
     },
   },
   methods: {

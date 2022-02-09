@@ -1,28 +1,9 @@
 <template>
   <v-app dark>
-    <Navbar :site="siteName" :color="color" />
     <v-main>
-      <v-container fluid class="pa-0">
+      <v-container fill-height>
         <nuxt keep-alive />
       </v-container>
     </v-main>
-    <Footer :footer="footer" :site="siteName" :color="color" />
   </v-app>
 </template>
-
-<script>
-import { mapGetters } from 'vuex'
-
-export default {
-
-  data() {
-    return {
-      color: 'info',
-      footer: false
-    }
-  },
-  computed: {
-    ...mapGetters(['siteName']),
-  },
-}
-</script>

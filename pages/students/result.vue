@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center" class="my-16">
+  <v-row justify="center" class="my-16 mx-2">
     <v-col cols="11" md="10" class="accent--text text-center">
       <v-row>
         <v-col cols="6">
@@ -25,19 +25,23 @@
     <v-col cols="11" md="10" class="accent--text text-cente">
       <v-row>
         <v-col cols="8">
-          <v-list-item class="font-weight-bold">
+          <v-list-item
+            v-for="item in student"
+            :key="item.name"
+            class="font-weight-bold"
+          >
             <v-list-item-content>
-              <v-list-item-title>Name: Perry Morgan</v-list-item-title>
-              <v-list-item-title>Admission: xxxxxx</v-list-item-title>
-              <v-list-item-title>Class: SS3</v-list-item-title>
-              <v-list-item-title>Term: Second Term</v-list-item-title>
-              <v-list-item-title>Session: 2022/2023</v-list-item-title>
+              <v-list-item-title>Name: {{ item.name }}</v-list-item-title>
+              <v-list-item-title>Admission Number: {{ item.admissionNum }}</v-list-item-title>
+              <v-list-item-title>Class: {{ item.class }}</v-list-item-title>
+              <v-list-item-title>Term: {{ item.term }}</v-list-item-title>
+              <v-list-item-title>Session: {{ item.session }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-col>
         <v-col cols="4">
           <v-img
-            src="https://res.cloudinary.com/reinforcedai/image/upload/v1644187944/pexels-pavel-danilyuk-7943987_hh9e9e.jpg"
+            src="https://res.cloudinary.com/reinforcedai/image/upload/v1644418109/pexel/pexels-ron-lach-9829317_nbyjtb.jpg"
             width="200"
             height="200"
             class="mx-auto"
@@ -112,7 +116,6 @@
           { text: 'Exam (60%)', value: 'exam' },
           { text: 'Total (100%)', value: 'total' },
           { text: 'Grade', value: 'grade' },
-          { text: 'Position In Class', value: 'position' },
           { text: 'Class Highest Score', value: 'highest' },
           { text: 'Class Lowest Score', value: 'lowest' },
           { text: 'Remark', value: 'remark' },
@@ -125,7 +128,6 @@
             total: 89.5,
             remark: 'Excellent',
             grade: 'A',
-            position: '1st',
             highest: 89.5,
             lowest: 57.5,
           },
@@ -137,7 +139,6 @@
             average: 44.75,
             remark: 'Excellent',
             grade: 'A',
-            position: '1st',
             highest: 89.5,
             lowest: 57.5,
           },
@@ -149,7 +150,6 @@
             average: 44.75,
             remark: 'Excellent',
             grade: 'A',
-            position: '1st',
             highest: 89.5,
             lowest: 57.5,
           },
@@ -161,7 +161,6 @@
             average: 44.75,
             remark: 'Excellent',
             grade: 'A',
-            position: '1st',
             highest: 89.5,
             lowest: 57.5,
           },
@@ -173,7 +172,6 @@
             average: 44.75,
             remark: 'Excellent',
             grade: 'A',
-            position: '1st',
             highest: 89.5,
             lowest: 57.5,
           },
@@ -185,7 +183,6 @@
             average: 44.75,
             remark: 'Excellent',
             grade: 'A',
-            position: '1st',
             highest: 89.5,
             lowest: 57.5,
           },
@@ -197,7 +194,6 @@
             average: 44.75,
             remark: 'Excellent',
             grade: 'A',
-            position: '1st',
             highest: 89.5,
             lowest: 57.5,
           },
@@ -209,7 +205,6 @@
             average: 44.75,
             remark: 'Excellent',
             grade: 'A',
-            position: '1st',
             highest: 89.5,
             lowest: 57.5,
           },
@@ -234,15 +229,15 @@
           },
           {
             grade: 'D',
-            score: '40 - 49',
+            score: '45 - 49',
           },
           {
             grade: 'E',
-            score: '30 - 39',
+            score: '40 - 44',
           },
           {
             grade: 'F',
-            score: '0 - 29',
+            score: '0 - 39',
           },
         ],
         commentHeaders: [
@@ -285,7 +280,7 @@
         ],
         performanceDesserts: [
           {
-            item: 'Total Score',
+            item: 'Average Score',
             value: '90',
           },
           {
@@ -307,6 +302,16 @@
          {
            item: 'Number Of Students In Class',
            value: '75'
+          },
+        ],
+
+        student: [
+          {
+            name: 'Perry Morgan',
+            admissionNum: 'xxxxxx',
+            class: 'SS2',
+            term: 'Second Term',
+            session: '2022/2023',
           },
         ],
       }
