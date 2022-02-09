@@ -17,7 +17,7 @@
               v-if="$auth.loggedIn"
               class="primary--text"
             >
-            {{ $auth.user.first_name }}
+            {{ $auth.user.username }}
           </div>
         </div>
       </template>

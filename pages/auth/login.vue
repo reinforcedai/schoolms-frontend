@@ -130,6 +130,8 @@ export default {
           this.$router.push('/students/')
         }
         // console.log(response.data.user)
+        // console.log($auth.loggedIn)
+        // console.log($auth.user.username)
       } catch (err) {
         this.error = err.response.data
       }
