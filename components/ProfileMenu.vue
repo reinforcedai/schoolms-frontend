@@ -15,7 +15,7 @@
           </v-btn>
             <div
               v-if="$auth.loggedIn"
-              class="primary--text"
+              class="primary--text text-capitalize"
             >
             {{ $auth.user.username }}
           </div>
