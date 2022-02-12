@@ -2,7 +2,7 @@
   <v-row justify="center" align="center" class="my-6">
 
     <v-col cols="12" class="success py-16">
-      <v-row align="center" justify="center">
+      <v-row justify="center" align="center">
         <v-col cols="12">
           <h1 class="accent--text text-center">{{ title }}</h1>
         </v-col>

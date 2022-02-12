@@ -1,5 +1,5 @@
 export const state = () => ({
-  siteName: 'COLLEGE',
+  siteName: 'SCHOOL MS',
   systemBarLinks: [
     { text: 'Students', to: '/students/', },
     { text: 'Staff', to: '/staff/', },

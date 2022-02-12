@@ -1,4 +1,4 @@
-import { getStrapiMedia } from "./medias";
+import { getMedia } from "./medias";
 
 export function getMetaTags(seo) {
   const tags = [];
@@ -37,7 +37,7 @@ export function getMetaTags(seo) {
     );
   }
   if (seo.shareImage) {
-    const imageUrl = getStrapiMedia(seo.shareImage.url);
+    const imageUrl = getMedia(seo.shareImage.url);
     tags.push(
       {
         hid: 'image',
@@ -70,12 +70,12 @@ export function getMetaTags(seo) {
   }
   tags.push({ hid: 'twitter:card', name: "twitter:card", content: "summary_large_image" });
   tags.push({ hid: 'twitter:image:alt', name: 'twitter:image:alt', content: seo.metaTitle });
-  tags.push({ hid: 'twitter:site', name: 'twitter:site', content: 'Reinforced AI' });
-  tags.push({ hid: 'twitter:url', name: 'twitter:url', content: 'https://reinforcedai.com' });
+  tags.push({ hid: 'twitter:site', name: 'twitter:site', content: 'FRONTEND' });
+  tags.push({ hid: 'twitter:url', name: 'twitter:url', content: 'https://frontend.com' });
   tags.push({ hid: 'og:image:alt', property: 'og:image:alt', content: seo.metaTitle });
-  tags.push({ hid: 'og:site_name', property: 'og:site_name', content: 'Reinforced AI' });
-  tags.push({ hid: 'og:type', property: 'og:type', content: 'Reinforced AI website' });
-  tags.push({ hid: 'og:url', property: 'og:url', content: 'https://reinforcedai.com' });
+  tags.push({ hid: 'og:site_name', property: 'og:site_name', content: 'FRONTEND' });
+  tags.push({ hid: 'og:type', property: 'og:type', content: 'FRONTEND' });
+  tags.push({ hid: 'og:url', property: 'og:url', content: 'https://frontend.com' });
 
   return tags;
 }

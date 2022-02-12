@@ -9,9 +9,9 @@
               class="shrink mr-2"
               contain
               :src="require('../../assets/img/logo.svg')"
-              width="100"
+              width="50"
             />
-            <h1>COLLEGE</h1>
+            <h1>SCHHOOL MS</h1>
         </div>
         </v-col>
         <v-col cols="6">
@@ -40,15 +40,12 @@
           </v-list-item>
         </v-col>
         <v-col cols="4">
-          <v-card outlined class="text-center">
-            <v-icon color="accent" size="150">mdi-account</v-icon>
-          </v-card>
-          <!-- <v-img
-            src="https://res.cloudinary.com/reinforcedai/image/upload/v1644418109/pexel/pexels-ron-lach-9829317_nbyjtb.jpg"
-            width="200"
-            height="200"
+          <v-img
+            src="https://res.cloudinary.com/reinforcedai/image/upload/v1644657554/pexel/pexels-ron-lach-9829317_gwivuh.png"
+            width="150"
+            height="150"
             class="mx-auto"
-          /> -->
+          />
         </v-col>
       </v-row>
     </v-col>
@@ -90,9 +87,9 @@
 
       <v-col cols="12" class="text-center">
         <v-card-text class="--text">
-          &copy; {{ new Date().getFullYear() }} - COLLEGE | All Right Reserved
+          &copy; {{ new Date().getFullYear() }} - SCHOOL MS | All Right Reserved
         </v-card-text>
-        <p>www.college.edu.ng</p>
+        <p>www.schoolms.edu.ng</p>
       </v-col>
 
     <SocialHead :title="title" :description="description" :image="image" />

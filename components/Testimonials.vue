@@ -38,19 +38,19 @@ export default {
       {
         'name': 'John Doe',
         'portfolio': 'CEO',
-        'image': 'https://res.cloudinary.com/reinforcedai/image/upload/v1643473642/pexel/pexels-alexander-krivitskiy-1251247_akxkqo.jpg',
+        'image': 'https://res.cloudinary.com/reinforcedai/image/upload/v1644657554/pexel/pexels-ron-lach-9829317_gwivuh.png',
         'testimony': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis delectus numquam doloremque nesciunt culpa qui',
       },
       {
         'name': 'John Doe',
         'portfolio': 'CEO',
-        'image': 'https://res.cloudinary.com/reinforcedai/image/upload/v1643473642/pexel/pexels-alexander-krivitskiy-1251247_akxkqo.jpg',
+        'image': 'https://res.cloudinary.com/reinforcedai/image/upload/v1644657554/pexel/pexels-ron-lach-9829317_gwivuh.png',
         'testimony': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis delectus numquam doloremque nesciunt culpa qui',
       },
       {
         'name': 'John Doe',
         'portfolio': 'CEO',
-        'image': 'https://res.cloudinary.com/reinforcedai/image/upload/v1643473642/pexel/pexels-alexander-krivitskiy-1251247_akxkqo.jpg',
+        'image': 'https://res.cloudinary.com/reinforcedai/image/upload/v1644657554/pexel/pexels-ron-lach-9829317_gwivuh.png',
         'testimony': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis delectus numquam doloremque nesciunt culpa qui',
       },
     ],

@@ -59,7 +59,7 @@ export default {
         {
           hid: 'twitter:url',
           name: 'twitter:url',
-          content: 'https://sample.com'
+          content: 'https://frontend.com'
         },
 
         // Open Graph
@@ -93,7 +93,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          content: 'https://sample.com'
+          content: 'https://frontend.com'
         },
       ]
     }

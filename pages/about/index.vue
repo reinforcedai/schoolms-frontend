@@ -1,8 +1,8 @@
 <template>
-  <v-row justify="center">
+  <v-row justify="center" align="center">
 
     <v-col cols="12" class="about-bg">
-      <v-row align="center" justify="center" class="fill-height">
+      <v-row justify="center" align="center" class="fill-height">
         <v-col cols="12">
           <h1 class="primary--text text-center">{{ title }}</h1>
         </v-col>
@@ -36,7 +36,7 @@
         >
           <v-avatar size="80">
             <v-img
-              :src="person.photo"
+              :src="person.src"
               alt="photo"
             />
           </v-avatar>
@@ -82,17 +82,17 @@ export default {
     persons: [
         {
           name: 'John Doe',
-          photo: 'https://res.cloudinary.com/reinforcedai/image/upload/v1643473642/pexel/pexels-alexander-krivitskiy-1251247_akxkqo.jpg',
+          src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1644657554/pexel/pexels-ron-lach-9829317_gwivuh.png',
           portfolio: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
         },
         {
           name: 'John Doe',
-          photo: 'https://res.cloudinary.com/reinforcedai/image/upload/v1643473642/pexel/pexels-alexander-krivitskiy-1251247_akxkqo.jpg',
+          src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1644657554/pexel/pexels-ron-lach-9829317_gwivuh.png',
           portfolio: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
         },
         {
           name: 'John Doe',
-          photo: 'https://res.cloudinary.com/reinforcedai/image/upload/v1643473642/pexel/pexels-alexander-krivitskiy-1251247_akxkqo.jpg',
+          src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1644657554/pexel/pexels-ron-lach-9829317_gwivuh.png',
           portfolio: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
         },
       ],

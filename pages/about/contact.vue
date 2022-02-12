@@ -5,6 +5,7 @@
       <h3>{{ title }}</h3>
       <contactInfo />
     </v-col>
+
     <v-col cols="11" md="5">
       <contactForm />
     </v-col>
@@ -14,7 +15,6 @@
     </v-col>
 
     <SocialHead :title="title" :description="description" :image="image" />
-
   </v-row>
 </template>
 <script>
