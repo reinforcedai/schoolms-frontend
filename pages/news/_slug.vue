@@ -11,10 +11,7 @@
 
     <v-col cols="12" md="6" class="secondary--text">
       <h3 class="text-capitalize title">{{ post.title }}</h3>
-      <v-img
-        v-if="post.image"
-        :data-src="getMedia(post.image)"
-      />
+      <v-img v-if="post.image" :src="getMedia(post.image)" height="300" />
       <p
         v-if="post.description"
         v-text="post.description"
@@ -34,6 +31,8 @@
 
 
 <script>
+import { getMedia } from "../../utils/medias";
+
 export default {
   async asyncData({ $axios, params }) {
     const slug = params.slug
@@ -44,7 +43,11 @@ export default {
       description: '',
       image: '',
     }
-  }
+  },
+
+  methods: {
+    getMedia,
+  },
 
 }
 </script>

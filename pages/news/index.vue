@@ -1,24 +1,19 @@
 <template>
-  <v-row justify="center" align="center" no-gutters>
+  <v-row justify="center" align="center" class="my-6">
 
-    <v-col cols="12">
-      <v-img
-        src="https://res.cloudinary.com/reinforcedai/image/upload/v1643474744/pexel/pexels-pixabay-207692_riefkk.jpg"
-        class="news-bg"
-      >
-        <v-row align="center" justify="center" class="fill-height">
-          <v-col cols="12">
-            <h1 class="primary--text text-center">{{ title }}</h1>
-          </v-col>
-        </v-row>
-      </v-img>
+    <v-col cols="12" class="success py-16">
+      <v-row align="center" justify="center">
+        <v-col cols="12">
+          <h1 class="accent--text text-center">{{ title }}</h1>
+        </v-col>
+      </v-row>
     </v-col>
 
-    <v-col v-if="posts" cols="12" class="pa-10">
+    <v-col v-if="posts[0]" cols="11" class="mt-16">
       <BlogCard :posts="posts" />
     </v-col>
 
-    <v-col v-else cols="12" class="text-center">
+    <v-col v-else cols="12" class="accent--text text-center">
       <p>Unavailable</p>
     </v-col>
 
@@ -36,18 +31,10 @@ export default {
   }),
   async asyncData({ $axios, $config }) {
     const response = await $axios.$get(`/news`)
+    // console.log(response.results)
     const posts = response.results
     return { posts }
   }
 
 }
 </script>
-
-<style scoped>
-.news-bg {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 60vh;
-}
-</style>

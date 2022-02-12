@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center" align="center" class="my-16" no-gutters>
+  <v-row justify="center" align="center" class="my-16">
 
     <v-col cols="12">
       <v-row align="center" justify="center" class="fill-height">

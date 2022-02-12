@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center" align="center" class="my-10 mx-2 fill-height">
+  <v-row justify="center" align="center" class="my-10 mx-2">
 
     <v-col cols="12" class="donate-bg">
       <v-row justify="center" align="center" class="text-center accent--text fill-height">

@@ -20,7 +20,7 @@ export default {
   },
   head() {
     return {
-      titleTemplate: '%s | FRONTEND SAMPLE',
+      titleTemplate: '%s | FRONTEND',
       title: this.title,
       meta: [
         {
@@ -55,7 +55,7 @@ export default {
         name: 'twitter:card',
         content: 'summary_large_image'
         },
-        { hid: 'twitter:site', name: 'twitter:site', content: 'FRONTEND SAMPLE' },
+        { hid: 'twitter:site', name: 'twitter:site', content: 'FRONTEND' },
         {
           hid: 'twitter:url',
           name: 'twitter:url',
@@ -88,7 +88,7 @@ export default {
           property: 'og:image:alt',
           content: this.title
         },
-        { hid: 'og:site_name', property: 'og:site_name', content: 'FRONTEND SAMPLE' },
+        { hid: 'og:site_name', property: 'og:site_name', content: 'FRONTEND' },
         { hid: 'og:type', property: 'og:type', content: 'website' },
         {
           hid: 'og:url',

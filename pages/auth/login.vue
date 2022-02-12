@@ -8,7 +8,7 @@
             <v-img
               alt="logo"
               contain
-              :src="require('../../assets/img/logo.png')"
+              :src="require('../../assets/img/logo.svg')"
               width="40"
               class="shrink mx-auto"
             />
@@ -71,7 +71,7 @@
                   class="accent text-uppercase font-weight-bold"
                   @click="userLogin"
                 >
-                  Submit
+                  Login
                 </v-btn>
               </v-col>
             </v-row>
@@ -126,10 +126,10 @@ export default {
     async userLogin() {
       try {
         let response = await this.$auth.loginWith('local', { data: this.credentials })
-        if (response.data.user.is_student) {
-          this.$router.push('/students/')
-        }
-        // console.log(response.data.user)
+        this.$router.push('/students/')
+        // if (response.data.user.is_student) {
+        // }
+        console.log(response.data.user)
         // console.log($auth.loggedIn)
         // console.log($auth.user.username)
       } catch (err) {

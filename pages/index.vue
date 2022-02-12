@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center" align="center" no-gutters>
+  <v-row justify="center" align="center">
 
     <v-col cols="12" class="text-center mb-16">
       <Carousel />
@@ -7,7 +7,7 @@
     <v-col cols="12" class="text-left mb-16">
       <v-row justify="center">
         <v-col cols="12" md="4" class="secondary--text">
-          <v-img src="https://res.cloudinary.com/reinforcedai/image/upload/v1644187944/pexels-pavel-danilyuk-7943987_hh9e9e.jpg"></v-img>
+          <v-img src="https://res.cloudinary.com/reinforcedai/image/upload/v1644604703/pexel/pexels-pavel-danilyuk-7943987_hh9e9e_athkw9.png"></v-img>
         </v-col>
 
         <v-col cols="11" md="7" class="secondary--text">

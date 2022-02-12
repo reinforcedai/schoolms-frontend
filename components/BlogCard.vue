@@ -1,10 +1,10 @@
 <template>
-  <v-row justify="center" align="center" fill-height>
+  <v-row justify="center" align="center">
     <v-col
         v-for='post in posts'
         :key='post.id'
         cols="12"
-        md="6"
+        md="4"
     >
       <v-lazy>
         <v-card
@@ -14,7 +14,7 @@
           min-height="500"
           class="success"
         >
-          <v-img v-if="post.image" :src="getMedia(post.image)" height="300" />
+          <v-img v-if="post.image" :src="getMedia(post.image)" height="200" />
           <v-card-title class="accent--text text-capitalize" v-if="post.title">{{ post.title }}</v-card-title>
           <v-card-subtitle class="accent--text" v-if="post.description">{{ post.description }}</v-card-subtitle>
           <v-card-actions>

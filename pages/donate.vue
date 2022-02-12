@@ -1,7 +1,7 @@
 <template>
-  <v-row justify="center" align="center" class="my-16">
+  <v-row justify="center" align="center" class="my-6">
 
-    <v-col cols="11" class="my-16 text-center">
+    <v-col cols="12" class="success text-center py-16">
       <h1 class="accent--text mb-5">Donate By Credit Card</h1>
       <v-btn
         href="https://ravesandbox.flutterwave.com/donate/kbwuv7ogyhkv"
@@ -13,6 +13,7 @@
           Donate
       </v-btn>
     </v-col>
+
     <v-col cols="11" class="accent--text">
       <h1>Direct Bank Transfer</h1>
       <v-row>

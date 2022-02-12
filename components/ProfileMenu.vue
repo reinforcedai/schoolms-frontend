@@ -1,23 +1,19 @@
 <template>
   <div class="text-center mx-2 mt-2">
-    <v-menu offset-y>
+    <v-menu offset-y open-on-hover>
       <template v-slot:activator="{ on, attrs }">
-        <div class="d-flex align-center mr-16">
-          <v-btn
-            color="success"
+        <div class="d-flex align-center mt-5">
+          <v-icon
             dark
+            size="20"
             v-bind="attrs"
             v-on="on"
-            icon
-            block
+          >mdi-account</v-icon>
+          <div
+            v-if="$auth.loggedIn"
+            class="primary--text ml-1"
           >
-            <v-icon>mdi-account</v-icon>
-          </v-btn>
-            <div
-              v-if="$auth.loggedIn"
-              class="primary--text text-capitalize"
-            >
-            {{ $auth.user.username }}
+          {{ $auth.user.email }}
           </div>
         </div>
       </template>

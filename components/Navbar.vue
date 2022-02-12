@@ -38,7 +38,7 @@
               alt="logo"
               class="shrink mr-2"
               contain
-              :src="require('../assets/img/logo.png')"
+              :src="require('../assets/img/logo.svg')"
               width="40"
             />
             <h3>{{ site }}</h3>
@@ -99,7 +99,7 @@
               alt="logo"
               class="shrink mr-2"
               contain
-              :src="require('../assets/img/logo.png')"
+              :src="require('../assets/img/logo.svg')"
               width="40"
             />
             <h3>{{ site }}</h3>

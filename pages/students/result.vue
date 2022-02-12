@@ -8,7 +8,7 @@
               alt="logo"
               class="shrink mr-2"
               contain
-              :src="require('../../assets/img/logo.png')"
+              :src="require('../../assets/img/logo.svg')"
               width="100"
             />
             <h1>COLLEGE</h1>
@@ -40,17 +40,27 @@
           </v-list-item>
         </v-col>
         <v-col cols="4">
-          <v-img
+          <v-card outlined class="text-center">
+            <v-icon color="accent" size="150">mdi-account</v-icon>
+          </v-card>
+          <!-- <v-img
             src="https://res.cloudinary.com/reinforcedai/image/upload/v1644418109/pexel/pexels-ron-lach-9829317_nbyjtb.jpg"
             width="200"
             height="200"
             class="mx-auto"
-          />
+          /> -->
         </v-col>
       </v-row>
     </v-col>
-    <v-col cols="11" md="10" class="accent--text">
+    <v-col cols="11" md="8" class="accent--text">
       <DataTable :headers="subjectHeaders" :desserts="subjectDesserts" :dense="dense" />
+    </v-col>
+
+    <v-col cols="2">
+      <p class="text-center">Grading System</p>
+      <v-card tile outlined>
+        <DataTable :headers="gradeHeaders" :desserts="gradeDesserts" />
+      </v-card>
     </v-col>
     <v-col cols="11" md="10" class="accent--text">
       <v-row>
@@ -58,15 +68,9 @@
           <h4 class="text-center pb-1">Performance</h4>
           <DataTable :headers="performanceHeaders" :desserts="performanceDesserts" :header="header" />
         </v-col>
-        <v-col cols="4">
+        <v-col cols="6">
           <h4 class="text-center pb-5">Comments</h4>
           <DataTable :headers="commentHeaders" :desserts="commentDesserts" />
-        </v-col>
-        <v-col cols="4">
-          <h4 class="text-center pb-5">Grading System</h4>
-          <v-card tile outlined>
-            <DataTable :headers="gradeHeaders" :desserts="gradeDesserts" />
-          </v-card>
         </v-col>
       </v-row>
     </v-col>
@@ -240,6 +244,7 @@
             score: '0 - 39',
           },
         ],
+
         commentHeaders: [
           { text: 'Designation', value: 'designation' },
           { text: 'Name', value: 'name' },
@@ -278,6 +283,7 @@
           { text: 'Item', value: 'item' },
           { text: 'Value', value: 'value' },
         ],
+
         performanceDesserts: [
           {
             item: 'Average Score',
