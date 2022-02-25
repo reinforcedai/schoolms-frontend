@@ -30,11 +30,11 @@
             text: 'Welcome To College',
           },
           {
-            src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1643474754/pexel/pexels-pavel-danilyuk-8442567_tdbmri.jpg',
+            src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1645778519/pexel/microscope-gd339bc0ae_640_a1iuhr.jpg',
             text: 'Laboratory',
           },
           {
-            src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1643472591/pexel/pexels-polina-zimmerman-3778622_lqcgoz.jpg',
+            src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1645779486/pexel/pexels-k-s-7457914_ugsstl.jpg',
             text: 'ICT',
           },
           {
@@ -42,15 +42,15 @@
             text: 'Library',
           },
           {
-            src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1643472581/pexel/pexels-arthur-krijgsman-4019754_bnbb9d.jpg',
+            src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1645778520/pexel/classroom-g4babd194d_640_bktqm2.jpg',
             text: 'Classroom',
           },
           {
-            src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1643473054/pexel/alina-chernysheva-JA2S6sJWleg-unsplash_fbfbpq.jpg',
+            src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1645778523/pexel/sports-g290b294b1_640_ubdyjn.jpg',
             text: 'Sports',
           },
           {
-            src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1643472578/pexel/pexels-mikhail-nilov-8923375_nubxcj.jpg',
+            src: 'https://res.cloudinary.com/reinforcedai/image/upload/v1643474746/pexel/pexels-kindel-media-8326147_amodzk.jpg',
             text: 'Experiment',
           },
         ],

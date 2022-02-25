@@ -26,7 +26,7 @@ export default {
     },
     size: {
       type: String,
-      default: '20',
+      default: '30',
     },
     socials: {
       type: Array,

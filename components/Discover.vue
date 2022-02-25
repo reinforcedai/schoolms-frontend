@@ -45,7 +45,7 @@ export default {
       },
       {
         'title': 'Library',
-        'src': 'https://res.cloudinary.com/reinforcedai/image/upload/v1644187939/pexels-pixabay-256455_k3lxil.jpg',
+        'src': 'https://res.cloudinary.com/reinforcedai/image/upload/v1643472585/pexel/pexels-pixabay-256541_2_s4lxeh.jpg',
         'text': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis delectus numquam doloremque nesciunt culpa qui',
       },
     ],

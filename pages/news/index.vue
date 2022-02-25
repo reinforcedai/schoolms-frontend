@@ -1,16 +1,12 @@
 <template>
   <v-row justify="center" align="center" class="my-6">
 
-    <v-col cols="12" class="success py-16">
-      <v-row justify="center" align="center">
-        <v-col cols="12">
-          <h1 class="accent--text text-center">{{ title }}</h1>
-        </v-col>
-      </v-row>
+    <v-col cols="12" class="accent--text text-center success py-16">
+      <h1>{{ title }}</h1>
     </v-col>
 
     <v-col v-if="posts[0]" cols="11" class="mt-16">
-      <BlogCard :posts="posts" />
+      <Card :posts="posts" />
     </v-col>
 
     <v-col v-else cols="12" class="accent--text text-center">
@@ -24,7 +20,7 @@
 <script>
 export default {
   data: () => ({
-    title: 'News And Events',
+    title: 'News',
     description: '',
     image: '',
     

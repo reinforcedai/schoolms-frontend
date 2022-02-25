@@ -3,7 +3,7 @@
 
     <v-col cols="12">
       <v-img
-        src="https://res.cloudinary.com/reinforcedai/image/upload/v1643472569/pexel/pexels-max-fischer-5212335_pu5vvp.jpg"
+        src="https://res.cloudinary.com/reinforcedai/image/upload/v1645778519/pexel/math-gf90ece4ba_640_tpft9h.jpg"
         class="career-bg"
       >
         <v-row align="center" justify="center" class="fill-height">

@@ -17,7 +17,7 @@
         Phone: +1 (437) xxx xxxx
       </v-btn>
       <v-btn text x-small class="primary--text text-lowercase">
-        Email: info@example.com
+        Email: info@frontend.com
       </v-btn>
       <v-spacer></v-spacer>
       <social-links color="primary" size="15" />
@@ -105,8 +105,10 @@
             <h3>{{ site }}</h3>
         </div>
       </nuxt-link>
+
       <v-spacer/>
-      <v-toolbar-items class="hidden-sm-and-down ml-5 pr-5">
+      
+      <v-toolbar-items class="hidden-sm-and-down mr-16">
         <v-btn
           v-for="link in navLinks"
           :key="link.title"

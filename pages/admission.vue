@@ -41,7 +41,7 @@ export default {
 
 <style scoped>
 .admission-bg {
-  background-image: url('https://res.cloudinary.com/reinforcedai/image/upload/v1643484273/pexels-rodnae-productions-7713548_tcnttn.jpg');
+  background-image: url('https://res.cloudinary.com/reinforcedai/image/upload/v1645778545/pexel/pexels-rfstudio-3886271_drnvem.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

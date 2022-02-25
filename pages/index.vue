@@ -7,7 +7,7 @@
     <v-col cols="12" class="text-left mb-16">
       <v-row justify="center">
         <v-col cols="12" md="4" class="secondary--text">
-          <v-img src="https://res.cloudinary.com/reinforcedai/image/upload/v1644658147/pexel/pexels-pavel-danilyuk-7943987_bpio0y.png"></v-img>
+          <v-img src="https://res.cloudinary.com/reinforcedai/image/upload/v1645778956/pexel/pexels-consoler-creative-11157983_pywtii.png"></v-img>
         </v-col>
 
         <v-col cols="11" md="7" class="secondary--text">

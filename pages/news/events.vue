@@ -1,39 +1,21 @@
 <template>
-  <v-row justify="center" align="center">
+  <v-row justify="center" class="mt-6 mb-16">
 
-    <v-col cols="12">
-      <v-img
-        src="https://res.cloudinary.com/reinforcedai/image/upload/v1643474756/pexel/pexels-run-ffwpu-2402734_qzncjf.jpg"
-        class="events-bg"
-      >
-        <v-row align="center" justify="center" class="fill-height">
-          <v-col cols="12">
-            <h1 class="primary--text text-center">{{ title }}</h1>
-          </v-col>
-        </v-row>
-      </v-img>
+    <v-col cols="12" class="accent--text text-center success py-16">
+      <h1>{{ title }}</h1>
     </v-col>
 
     <SocialHead :title="title" :description="description" :image="image" />
   </v-row>
 </template>
-<script>
 
+<script>
 export default {
   data: () => ({
-    title: 'News and Events',
+    title: 'Events',
     description: '',
     image: '',
-    
   }),
 
 }
 </script>
-<style scoped>
-.events-bg {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 70vh;
-}
-</style>
